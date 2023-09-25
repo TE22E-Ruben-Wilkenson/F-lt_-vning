@@ -1,11 +1,17 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
         
         int fält1_summa = 0;
         int fält2_summa = 0;
+        int inputfält_summa = 0;
         int[] fält1 = {8,4,6,3,9};
         int[] fält2 = {18,14,16,13,19};
         int[] summafält = new int[5];
+        int[] inputfält = new int[4];
+
+        Scanner tan = new Scanner(System.in);
 
         for(int i = 0; i < fält1.length; i++){
             System.out.println(fält1[i]);
@@ -31,8 +37,16 @@ public class App {
         System.out.println("Summan av fält1: " + fält1_summa);
         System.out.println("summan av fält2: " + fält2_summa);
         
-        
-        
+        for(int i = 0; i < inputfält.length; i++){
+            System.out.print("Skriv in nummer: ");
+            inputfält[i] = tan.nextInt();
+        }
+
+        for(int i = 0; i < inputfält.length; i++){
+            inputfält_summa += inputfält[i];
+        }
+
+        System.out.println("inputfält summa: " + inputfält_summa);
 
 
 
